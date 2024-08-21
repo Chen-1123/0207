@@ -14,12 +14,13 @@ body {
 
 header {
     text-align: center;
-    padding: 20px 0;
+    padding: 40px 0 20px 0; /* 调整标题向下移动两行 */
     background: rgba(255, 255, 255, 0.8);
+    position: relative;
 }
 
 .title {
-    font-size: 3em;
+    font-size: 3.5em; /* 字体扩大两号 */
     color: #B07219;
     font-family: 'Brush Script MT', cursive;
     margin: 0;
@@ -29,18 +30,22 @@ header {
     list-style: none;
     padding: 10px 0;
     margin: 0;
+    position: absolute;
+    right: 20px;
+    top: 20px;
 }
 
 .nav-menu li {
-    display: inline;
-    margin: 0 20px;
+    display: inline-block;
+    margin: 0 25px; /* 增大间隔 */
 }
 
 .nav-menu li a {
     text-decoration: none;
-    color: #B07219;
+    color: #333;
     font-weight: bold;
     font-size: 1.2em;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* 可爱风的字体 */
 }
 
 main {
