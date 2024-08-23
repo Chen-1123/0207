@@ -10,17 +10,19 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 header {
     text-align: center;
-    padding: 10px 0 20px 0; /* 调整标题向下移动两行 */
+    padding: 10px 0 20px 0;
     background: rgba(255, 255, 255, 0.8);
     position: relative;
 }
 
 .title {
-    font-size: 4em; /* 字体扩大两号 */
+    font-size: 4em;
     color: #B07219;
     font-family: 'Brush Script MT', cursive;
     margin: 0;
@@ -32,12 +34,12 @@ header {
     margin: 0;
     position: absolute;
     right: 20px;
-    top: 70px; /* 向下移动一行 */
+    top: 70px;
 }
 
 .nav-menu li {
     display: inline-block;
-    margin: 0 20px; /* 增大间隔 */
+    margin: 0 20px;
 }
 
 .nav-menu li a {
@@ -45,21 +47,21 @@ header {
     color: #333;
     font-weight: bold;
     font-size: 1.2em;
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* 可爱风的字体 */
+    font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
 main {
     flex-grow: 1;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     padding: 20px;
 }
 
 .content {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-end; /* 从右到左排列 */
     max-width: 1000px;
     margin: auto;
 }
@@ -68,24 +70,36 @@ main {
     background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     padding: 20px;
-    margin: 10px;
-    text-align: center;
-    width: 250px; /* 增大卡片宽度 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影增加立体感 */
-    transition: transform 0.3s ease-in-out; /* 添加动画效果 */
+    margin: 10px 0;
+    width: 250px;
+    box-shadow: none; /* 隐藏阴影，不显示框 */
+    transition: transform 0.3s ease-in-out;
 }
 
 .card:hover {
-    transform: scale(1.05); /* 鼠标悬停时放大卡片 */
+    transform: scale(1.05);
 }
 
 .card img {
     width: 100%;
     border-radius: 5px;
+    display: block; /* 确保图片是块级元素，便于居中显示 */
+    margin: 0 auto; /* 水平居中图片 */
 }
 
 .card p {
-    margin: 10px 0;
+    writing-mode: vertical-rl; /* 文字竖排 */
+    text-align: right; /* 文字从右到左排列 */
+    margin: 0; /* 移除段落的默认外边距 */
     color: #1a73e8;
-    font-family: 'Arial', sans-serif; /* 保持简洁的字体 */
+    font-family: 'Courier New', monospace; /* 使用等宽字体 */
+    line-height: 2; /* 根据需要调整行高 */
+    font-size: 1.2em; /* 根据需要调整字体大小 */
+}
+
+/* 可选：添加一些响应式设计，以适应不同屏幕尺寸 */
+@media (max-width: 768px) {
+    .card {
+        width: calc(100% - 40px); /* 在小屏幕上卡片宽度充满 */
+    }
 }
