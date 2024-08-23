@@ -37,7 +37,7 @@ header {
 
 .nav-menu li {
     display: inline-block;
-    margin: 0 30px; /* 增大间隔 */
+    margin: 0 20px; /* 增大间隔 */
 }
 
 .nav-menu li a {
