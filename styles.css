@@ -14,13 +14,13 @@ body {
 
 header {
     text-align: center;
-    padding: 35px 0 20px 0; /* 调整标题向下移动两行 */
+    padding: 70px 0 20px 0; /* 调整标题向下移动两行 */
     background: rgba(255, 255, 255, 0.8);
     position: relative;
 }
 
 .title {
-    font-size: 3.5em; /* 字体扩大两号 */
+    font-size: 4em; /* 字体扩大两号 */
     color: #B07219;
     font-family: 'Brush Script MT', cursive;
     margin: 0;
@@ -32,12 +32,12 @@ header {
     margin: 0;
     position: absolute;
     right: 20px;
-    top: 25px;
+    top: 70px; /* 向下移动一行 */
 }
 
 .nav-menu li {
     display: inline-block;
-    margin: 0 20px; /* 增大间隔 */
+    margin: 0 30px; /* 增大间隔 */
 }
 
 .nav-menu li a {
@@ -70,7 +70,13 @@ main {
     padding: 20px;
     margin: 10px;
     text-align: center;
-    width: 220px;
+    width: 250px; /* 增大卡片宽度 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影增加立体感 */
+    transition: transform 0.3s ease-in-out; /* 添加动画效果 */
+}
+
+.card:hover {
+    transform: scale(1.05); /* 鼠标悬停时放大卡片 */
 }
 
 .card img {
@@ -81,4 +87,5 @@ main {
 .card p {
     margin: 10px 0;
     color: #1a73e8;
+    font-family: 'Arial', sans-serif; /* 保持简洁的字体 */
 }
