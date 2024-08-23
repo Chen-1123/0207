@@ -35,57 +35,61 @@ header {
     top: 70px; /* 向下移动一行 */
 }
 
-.nav-menu li {
-    display: inline-block;
-    margin: 0 30px; /* 增大间隔 */
-}
-
-.nav-menu li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 1.2em;
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* 可爱风的字体 */
-}
-
+/* main 部分的整体样式 */
 main {
     flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    background: rgba(0, 0, 0, 0.4); /* 增加一个半透明背景层，使内容更突出 */
 }
 
+/* content 的布局和样式 */
 .content {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    max-width: 1000px;
+    max-width: 1200px; /* 容器最大宽度 */
     margin: auto;
+    padding: 20px;
+    gap: 20px; /* 增加卡片之间的间距 */
 }
 
+/* card 的样式 */
 .card {
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.9); /* 增加卡片的半透明背景层 */
+    border-radius: 15px; /* 圆角处理 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
     padding: 20px;
     margin: 10px;
     text-align: center;
-    width: 250px; /* 增大卡片宽度 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影增加立体感 */
-    transition: transform 0.3s ease-in-out; /* 添加动画效果 */
+    width: 280px; /* 调整卡片宽度 */
+    transition: transform 0.3s, box-shadow 0.3s; /* 添加卡片的过渡效果 */
 }
 
+/* 当鼠标悬停时，卡片放大并增加阴影 */
 .card:hover {
-    transform: scale(1.05); /* 鼠标悬停时放大卡片 */
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
+/* 图片的样式 */
 .card img {
     width: 100%;
-    border-radius: 5px;
+    border-radius: 10px; /* 图片圆角处理 */
+    margin-bottom: 15px;
 }
 
+/* 卡片中的文本样式 */
 .card p {
     margin: 10px 0;
-    color: #1a73e8;
-    font-family: 'Arial', sans-serif; /* 保持简洁的字体 */
+    color: #1a73e8; /* 文字颜色 */
+    font-size: 1.1em;
+    font-family: 'Arial', sans-serif; /* 字体样式 */
+}
+
+.card p:first-child {
+    font-weight: bold;
+    color: #333; /* 第一行文字的颜色 */
 }
