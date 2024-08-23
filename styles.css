@@ -14,7 +14,7 @@ body {
 
 header {
     text-align: center;
-    padding: 70px 0 20px 0; /* 调整标题向下移动两行 */
+    padding: 30px 0 20px 0; /* 调整标题向下移动两行 */
     background: rgba(255, 255, 255, 0.8);
     position: relative;
 }
