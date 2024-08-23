@@ -14,7 +14,7 @@ body {
 
 header {
     text-align: center;
-    padding: 40px 0 20px 0; /* 调整标题向下移动两行 */
+    padding: 35px 0 20px 0; /* 调整标题向下移动两行 */
     background: rgba(255, 255, 255, 0.8);
     position: relative;
 }
@@ -37,7 +37,7 @@ header {
 
 .nav-menu li {
     display: inline-block;
-    margin: 0 25px; /* 增大间隔 */
+    margin: 0 20px; /* 增大间隔 */
 }
 
 .nav-menu li a {
