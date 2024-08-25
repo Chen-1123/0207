@@ -53,13 +53,15 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%)rotate(-90deg;
             font-size: 24px;
             text-align: center;
             max-width: 600px;
             line-height: 1.5;
             color: #000000; 
             animation: fadeInOut 10s infinite;
+            font-family: 'Dancing Script', cursive; /* 使用好看的字体，如Dancing Script */
+            letter-spacing: 5px; /* 增加字间距 */
         }
 
         @keyframes fadeInOut {
@@ -67,6 +69,8 @@
             20%, 80% { opacity: 1; }
         }
     </style>
+    <!-- Google Fonts 引入 -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
