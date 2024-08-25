@@ -5,6 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Anniversary</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-image: url('image.png'); /* 使用您上传的背景图片 */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 36px;
+            margin: 0;
+            color: #D2691E; /* 栗色文字 */
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+        }
+
+        .nav-menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-menu li {
+            margin: 0 15px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #000;
+            font-size: 18px;
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* 圆体字体 */
+        }
+
+        .poem {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            text-align: center;
+            max-width: 600px;
+            line-height: 1.5;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            animation: fadeInOut 10s infinite;
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0; }
+            20%, 80% { opacity: 1; }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -18,6 +82,27 @@
             </ul>
         </nav>
     </header>
-    <script src="script.js"></script>
+
+    <div class="poem" id="poemDisplay"></div>
+
+    <script>
+        const poems = [
+            "To love is nothing. To be loved is something. But to love and be loved, that’s everything.",
+            "The best thing to hold onto in life is each other.",
+            "Love is composed of a single soul inhabiting two bodies.",
+            "In all the world, there is no heart for me like yours. In all the world, there is no love for you like mine."
+        ];
+
+        let index = 0;
+        const poemDisplay = document.getElementById("poemDisplay");
+
+        function showNextPoem() {
+            poemDisplay.textContent = poems[index];
+            index = (index + 1) % poems.length;
+        }
+
+        setInterval(showNextPoem, 10000); // 每10秒切换一次
+        showNextPoem(); // 显示第一首诗
+    </script>
 </body>
 </html>
