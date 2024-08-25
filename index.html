@@ -55,12 +55,13 @@
             left: 50%;
             transform: translate(-50%, -50%) rotate(-90deg); 
             font-size: 24px;
-            text-align: center;
-            max-width: 600px;
+            writing-mode: vertical-rl; /* 设置文本为从右到左的竖排 */
+            text-align: right; /* 竖排文本的对齐方式 */
+            max-width: 400px;
             line-height: 1.5;
             color: #000000; 
             animation: fadeInOut 10s infinite;
-            font-family: 'Dancing Script', cursive; /* 使用好看的字体，如Dancing Script */
+            font-family: 'Kai', '楷体', cursive;/* 使用好看的字体，如Dancing Script */
             letter-spacing: 5px; /* 增加字间距 */
         }
 
